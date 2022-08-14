@@ -23,4 +23,9 @@ public class UserService implements IUserService {
         UserAddress userAddress2 = new UserAddress(2,"第二地址","1","孙悟空","67890","Default");
         return Arrays.asList(userAddress1,userAddress2);
     }
+
+    @Override
+    public UserAddress echo(UserAddress userAddress) {
+        return userAddress;
+    }
 }

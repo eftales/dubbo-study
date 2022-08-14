@@ -1,10 +1,15 @@
 package com.abc.dubbo.bean;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 public class UserAddress implements Serializable {
+    @Min(0)
     private Integer id;
+    @NotNull
     private String userAddress;
+    @NotNull
     private String userID;
     private String consignee;
     private String phoneNum;
